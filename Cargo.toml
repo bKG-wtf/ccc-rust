@@ -6,6 +6,10 @@ authors = ["eyshoit-commits"]
 description = "Cloud Code Router and MCP Server implementation in Rust"
 license = "MIT"
 
+[lib]
+name = "ccc_rust_mcp"
+path = "src/lib.rs"
+
 [dependencies]
 tokio = { version = "1.42", features = ["full"] }
 axum = "0.7"
@@ -27,6 +31,10 @@ http-body-util = "0.1"
 [[bin]]
 name = "ccc-mcp-server"
 path = "src/main.rs"
+
+[[example]]
+name = "usage_example"
+path = "examples/usage_example.rs"
 
 [profile.release]
 opt-level = 3
